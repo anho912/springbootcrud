@@ -13,6 +13,7 @@ import java.util.Collection;
 /**
  * @Author: anhao
  * @Date:2018/12/2 11:21
+ * CRUD
  */
 @RestController(value = "v2")
 public class StudentController {

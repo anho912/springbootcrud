@@ -20,16 +20,30 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    /**
+     * 获取全部信息
+     * @return
+     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public Collection<Student> getAll() {
         return studentService.getAll();
     }
 
+    /**
+     * 获取指定id信息
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Student getById(@PathVariable("id") int id) {
         return studentService.getById(id);
     }
 
+    /**
+     * 根据id删除用户
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
     public Collection<Student> deleteById(@PathVariable("id")int id){
         return studentService.deleteById(id);

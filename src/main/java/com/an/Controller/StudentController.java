@@ -20,6 +20,10 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    /**
+     * 获取所有信息
+     * @return
+     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public Collection<Student> getAll() {
         return studentService.getAll();
